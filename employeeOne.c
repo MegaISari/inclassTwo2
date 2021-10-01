@@ -21,3 +21,23 @@ PtrToEmployee searchEmployeeByName(PtrToConstEmployee ptr, int tableSize, char *
     }
     return NULL; 
 }
+
+PtrToEmployee searchEmployeeByPhone(PtrToConstEmployee ptr, int tableSize, char * targetPhone){
+    const PtrToConstEmployee endPtr = ptr + tableSize;
+    for(; ptr < endPtr; ptr++)
+    {
+        if(strcmp(ptr->phone,targetPhone) == 0)
+            return (PtrToEmployee) ptr;
+    }
+    return NULL;
+}
+
+PtrToEmployee searchEmployeeBySalary(PtrToConstEmployee ptr, int tableSize, double targetSalary){
+    const PtrToConstEmployee endPtr = ptr + tableSize;
+    for(; ptr < endPtr; ptr++) //search until end of table ptr++ will increment by one
+    {
+        if(ptr->salary == targetSalary)//check if it equals the employee number
+            return (PtrToEmployee) ptr;
+    }
+    return NULL;
+}
