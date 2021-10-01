@@ -12,7 +12,7 @@ PtrToEmployee searchEmployeeByNumber(PtrToConstEmployee ptr, int tableSize, long
 }
 
 //Essentially the same functionality as above but comparing strings to check if equal 
-PtrToEmployee searchEmployeeByNumber(PtrToConstEmployee ptr, int tableSise, char * targetName) {
+PtrToEmployee searchEmployeeByName(PtrToConstEmployee ptr, int tableSize, char * targetName) {
     const PtrToConstEmployee endPtr = ptr + tableSize;
     for(; ptr < endPtr; ptr++)
     {
